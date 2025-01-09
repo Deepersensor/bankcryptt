@@ -5,7 +5,12 @@ import 'shared/styles/theme.dart';
 import 'shared/localization/app_localizations.dart';
 import 'shared/localization/locale_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_localizations/flutter_localizations.dart'; // Added import
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'features/home/presentation/home_page.dart';
+import 'features/user_profiles/presentation/settings_page.dart';
+import 'features/user_profiles/presentation/profile_page.dart';
+// Import additional pages if necessary
 
 // ...existing code...
 
@@ -27,7 +32,6 @@ class _AppState extends State<App> {
   }
 
   final List<Widget> _pages = [
-    // Define your pages here
     HomePage(),
     SettingsPage(),
     ProfilePage(),
@@ -68,7 +72,8 @@ class _AppState extends State<App> {
                 currentIndex: _currentIndex,
                 onTap: _onTabTapped,
               ),
-            ),          );
+            ),
+          );
         },
       ),
     );
