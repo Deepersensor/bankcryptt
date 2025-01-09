@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'app.dart';
 import 'shared/widgets/splash_screen.dart';
+import 'routes/navigation_observer.dart';
+import 'core/services/analytics_service.dart';
 
 void main() {
-  runApp(const MyApp());
+  final analyticsService = AnalyticsService();
+  runApp(MyApp(analyticsService: analyticsService));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AnalyticsService analyticsService;
 
-  // This widget is the root of your application.
+  const MyApp({super.key, required this.analyticsService});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +23,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const SplashScreen(),
+      navigatorObservers: [AppNavigationObserver(analyticsService)],
     );
   }
 }
