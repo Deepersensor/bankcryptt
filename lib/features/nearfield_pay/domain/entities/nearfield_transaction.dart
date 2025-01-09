@@ -1,0 +1,13 @@
+class NearfieldTransaction {
+  // ...existing code...
+  final String nfcTagId;
+  final DateTime transactionTime;
+  // ...existing code...
+  
+  NearfieldTransaction({
+    // ...existing parameters...
+    required this.nfcTagId,
+    required this.transactionTime,
+    // ...existing parameters...
+  });
+}
