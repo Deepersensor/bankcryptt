@@ -4,7 +4,8 @@ import 'shared/widgets/app_bar_with_actions.dart';
 import 'shared/styles/theme.dart';
 import 'shared/localization/app_localizations.dart';
 import 'shared/localization/locale_provider.dart';
-import 'package:provider/provider.dart'; // Assuming provider is used for state management
+import 'package:provider/provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart'; // Added import
 
 // ...existing code...
 
@@ -25,6 +26,14 @@ class _AppState extends State<App> {
     });
   }
 
+  final List<Widget> _pages = [
+    // Define your pages here
+    HomePage(),
+    SettingsPage(),
+    ProfilePage(),
+    // Add more pages as needed
+  ];
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -37,11 +46,10 @@ class _AppState extends State<App> {
             locale: localeProvider.locale,
             supportedLocales: AppLocalizations.supportedLocales,
             localizationsDelegates: [
-              // Add localization delegates
-              // AppLocalizations.delegate,
-              // GlobalMaterialLocalizations.delegate,
-              // GlobalWidgetsLocalizations.delegate,
-              // GlobalCupertinoLocalizations.delegate,
+              AppLocalizations.delegate, // Uncommented
+              GlobalMaterialLocalizations.delegate, // Uncommented
+              GlobalWidgetsLocalizations.delegate, // Uncommented
+              GlobalCupertinoLocalizations.delegate, // Uncommented
             ],
             home: Scaffold(
               appBar: AppBarWithActions(
@@ -55,14 +63,12 @@ class _AppState extends State<App> {
                   ),
                 ],
               ),
-              body: // ...existing code for different pages based on _currentIndex...
-              ,
+              body: _pages[_currentIndex], // Replaced placeholder with actual widget
               bottomNavigationBar: BottomNavBar(
                 currentIndex: _currentIndex,
                 onTap: _onTabTapped,
               ),
-            ),
-          );
+            ),          );
         },
       ),
     );
