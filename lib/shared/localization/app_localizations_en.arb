@@ -3,6 +3,9 @@
   "appTitle": "BankCryptt",
   "settings": "Settings",
   "home": "Home",
-  "profile": "Profile"
+  "profile": "Profile",
+  "virtualCard": "Virtual Card",
+  "sendCrypto": "Send Crypto",
+  "receiveCrypto": "Receive Crypto"
   // Add more key-value pairs for localized strings
 }

@@ -10,6 +10,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'features/home/presentation/home_page.dart';
 import 'features/user_profiles/presentation/settings_page.dart';
 import 'features/user_profiles/presentation/profile_page.dart';
+import 'features/payments/presentation/virtual_card_page.dart';
+import 'features/payments/presentation/send_crypto_page.dart';
+import 'features/payments/presentation/receive_crypto_page.dart';
 // Import additional pages if necessary
 
 // ...existing code...
@@ -36,6 +39,9 @@ class _AppState extends State<App> {
     SettingsPage(),
     ProfilePage(),
     // Add more pages as needed
+    VirtualCardPage(),
+    SendCryptoPage(),
+    ReceiveCryptoPage(),
   ];
 
   @override

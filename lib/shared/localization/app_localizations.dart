@@ -20,5 +20,53 @@ class AppLocalizations {
     );
   }
 
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: 'Settings page title',
+    );
+  }
+
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: 'Home page title',
+    );
+  }
+
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: 'Profile page title',
+    );
+  }
+
+  String get virtualCard {
+    return Intl.message(
+      'Virtual Card',
+      name: 'virtualCard',
+      desc: 'Virtual Card page title',
+    );
+  }
+
+  String get sendCrypto {
+    return Intl.message(
+      'Send Crypto',
+      name: 'sendCrypto',
+      desc: 'Send Crypto page title',
+    );
+  }
+
+  String get receiveCrypto {
+    return Intl.message(
+      'Receive Crypto',
+      name: 'receiveCrypto',
+      desc: 'Receive Crypto page title',
+    );
+  }
+
   // Add more localized strings here
 }
