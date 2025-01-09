@@ -1,0 +1,6 @@
+// ...existing code...
+
+const String apiBaseUrl = "https://api.bankcryptt.com";
+const int timeoutDuration = 30; // seconds
+
+// ...existing code...
