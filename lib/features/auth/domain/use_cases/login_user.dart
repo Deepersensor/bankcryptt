@@ -1,3 +1,5 @@
+import 'package:bankcryptt/features/auth/domain/repositories/auth_repository.dart';
+
 import '../../data/models/user_model.dart';
 import '../entities/user.dart';
 
