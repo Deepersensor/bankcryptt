@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "appTitle": "BankCryptt",
+  "settings": "Settings",
+  "home": "Home",
+  "profile": "Profile"
+  // Add more key-value pairs for localized strings
+}
